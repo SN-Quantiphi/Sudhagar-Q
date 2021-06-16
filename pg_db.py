@@ -1,7 +1,7 @@
 import databases, sqlalchemy
 
 ## Postgres Database
-DATABASE_URL = "postgresql://postgres:@127.0.0.1:5432/dbtest"
+DATABASE_URL = "sqlite:///./store.db"
 database = databases.Database(DATABASE_URL)
 metadata = sqlalchemy.MetaData()
 

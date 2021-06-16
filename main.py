@@ -8,7 +8,7 @@ from passlib.context import CryptContext
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 app = FastAPI(
-    docs_url="/api/v2/docs",
+    docs_url="/api/v1/docs",
     title="Dashboard API",
     description="Dashboard MicroService",
     version="1.0",
@@ -82,8 +82,3 @@ async def delete_user(user: mdUser.UserDelete):
         "status" : True,
         "message": "This user has been deleted successfully." 
     }
-
-@app.get("/courses", tags=["Courses"])
-def find_all_courses():
-    return "List all courses."
-    

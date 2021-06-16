@@ -11,15 +11,15 @@ class UserList(BaseModel):
     create_at : str
     status    : str
 class UserEntry(BaseModel):
-    username  : str = Field(..., example="potinejj")
-    password  : str = Field(..., example="potinejj")
-    first_name: str = Field(..., example="Potine")
-    last_name : str = Field(..., example="Sambo")
+    username  : str = Field(..., example="john")
+    password  : str = Field(..., example="John@123")
+    first_name: str = Field(..., example="john")
+    last_name : str = Field(..., example="cen")
     gender    : str = Field(..., example="M")
 class UserUpdate(BaseModel):
     id        : str = Field(..., example="Enter your id")
-    first_name: str = Field(..., example="Potine")
-    last_name : str = Field(..., example="Sambo")
+    first_name: str = Field(..., example="john")
+    last_name : str = Field(..., example="cen")
     gender    : str = Field(..., example="M")
     status    : str = Field(..., example="1")
 class UserDelete(BaseModel):
